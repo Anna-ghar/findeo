@@ -11,15 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('property', function (Blueprint $table) {
+        Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('type_id');
             $table->string('title');
+            $table->double('area');
             $table->text('description');
             $table->string('address');
+            $table->integer('zip-code');
             $table->double('price');
             $table->integer('rooms');
+            $table->integer('bathrooms');
+            $table->integer('building_age');
+            $table->integer('bedrooms');
             $table->timestamps();
         });
     }
@@ -29,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('property');
+        Schema::dropIfExists('properties');
     }
 };
