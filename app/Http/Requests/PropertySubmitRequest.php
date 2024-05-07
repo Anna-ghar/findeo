@@ -11,7 +11,7 @@ class PropertySubmitRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -34,6 +34,7 @@ class PropertySubmitRequest extends FormRequest
             'state' => 'required|string',
             'zip' => 'required|numeric',
             'summary' => 'required|string',
+            'features' => 'array',
         ];
     }
 }

@@ -14,13 +14,13 @@ class PropertyFeaturesSeeder extends Seeder
     public function run(): void
     {
         $features = [
-            ['feature_name' => 'Air Conditioning'],
-            ['feature_name' => 'Swimming Pool'],
-            ['feature_name' => 'Central Heating'],
-            ['feature_name' => 'Laundry Room'],
-            ['feature_name' => 'Gym'],
-            ['feature_name' => 'Alarm'],
-            ['feature_name' => 'Window Covering'],
+            ['name' => 'Air Conditioning'],
+            ['name' => 'Swimming Pool'],
+            ['name' => 'Central Heating'],
+            ['name' => 'Laundry Room'],
+            ['name' => 'Gym'],
+            ['name' => 'Alarm'],
+            ['name' => 'Window Covering'],
         ];
         foreach ($features as $feature) {
             Feature::create($feature);

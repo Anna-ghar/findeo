@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PropertySubmitRequest;
 use App\Models\Feature;
+use App\Models\Property;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
@@ -20,16 +23,18 @@ class PropertyController extends Controller
      */
     public function create()
     {
+        $types = Type::all();
         $features = Feature::all();
-        return view('property.create')->with('features', $features);
+        return view('property.create', ['features' => $features, 'types' => $types]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PropertySubmitRequest $request)
     {
-        //
+        $property = new Property();
+        $property->title = $request->title;
     }
 
     /**

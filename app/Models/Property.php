@@ -33,6 +33,6 @@ class Property extends Model
     }
     public function  types()
     {
-        return $this->belongsToMany(Type::class);
+        return $this->belongsTo(Type::class);
     }
 }

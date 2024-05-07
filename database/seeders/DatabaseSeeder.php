@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
              'password' => bcrypt('123456'),
          ]);
         $this->call(PropertyFeaturesSeeder::class);
+
+        $this->call(PropertyTypeSeeder::class);
     }
 }

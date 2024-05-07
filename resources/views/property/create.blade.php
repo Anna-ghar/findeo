@@ -314,6 +314,8 @@
 
             <!-- Submit Page -->
             <div class="col-md-12">
+                <form action="{{route('store')}}" method="post">
+                    @csrf
                 <div class="submit-page">
 
                     <div class="notification notice large margin-bottom-55">
@@ -349,11 +351,15 @@
                                 <h5>Type</h5>
                                 <select class="chosen-select-no-single" name="type">
                                     <option label="blank"></option>
-                                    <option>Apartment</option>
-                                    <option>House</option>
-                                    <option>Commercial</option>
-                                    <option>Garage</option>
-                                    <option>Lot</option>
+                                    @foreach($types as $type)
+                                        <option>{{$type->name}}</option>
+                                    @endforeach
+{{--                                    <option label="blank"></option>--}}
+{{--                                    <option>Apartment</option>--}}
+{{--                                    <option>House</option>--}}
+{{--                                    <option>Commercial</option>--}}
+{{--                                    <option>Garage</option>--}}
+{{--                                    <option>Lot</option>--}}
                                 </select>
                             </div>
 
@@ -454,7 +460,7 @@
                         <!-- Description -->
                         <div class="form">
                             <h5>Description</h5>
-                            <textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="summary" spellcheck="true""></textarea>
+                            <textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
                         </div>
 
                         <!-- Row -->
@@ -508,27 +514,32 @@
                         <h5 class="margin-top-30">Other Features <span>(optional)</span></h5>
                         <div class="checkboxes in-row margin-bottom-20">
 
-                            <input id="check-2" type="checkbox" name="check">
-                            <label for="check-2">Air Conditioning</label>
+                            @foreach($features as $feature)
+                                <input id="check-{{ $feature->id }}" type="checkbox" name="features[]" value="{{ $feature->id }}">
+                                <label for="check-{{ $feature->id }}">{{ $feature->name }}</label>
+                            @endforeach
 
-                            <input id="check-3" type="checkbox" name="check">
-                            <label for="check-3">Swimming Pool</label>
+{{--                            <input id="check-2" type="checkbox" name="check">--}}
+{{--                            <label for="check-2">Air Conditioning</label>--}}
 
-                            <input id="check-4" type="checkbox" name="check" >
-                            <label for="check-4">Central Heating</label>
+{{--                            <input id="check-3" type="checkbox" name="check">--}}
+{{--                            <label for="check-3">Swimming Pool</label>--}}
 
-                            <input id="check-5" type="checkbox" name="check">
-                            <label for="check-5">Laundry Room</label>
+{{--                            <input id="check-4" type="checkbox" name="check" >--}}
+{{--                            <label for="check-4">Central Heating</label>--}}
+
+{{--                            <input id="check-5" type="checkbox" name="check">--}}
+{{--                            <label for="check-5">Laundry Room</label>--}}
 
 
-                            <input id="check-6" type="checkbox" name="check">
-                            <label for="check-6">Gym</label>
+{{--                            <input id="check-6" type="checkbox" name="check">--}}
+{{--                            <label for="check-6">Gym</label>--}}
 
-                            <input id="check-7" type="checkbox" name="check">
-                            <label for="check-7">Alarm</label>
+{{--                            <input id="check-7" type="checkbox" name="check">--}}
+{{--                            <label for="check-7">Alarm</label>--}}
 
-                            <input id="check-8" type="checkbox" name="check">
-                            <label for="check-8">Window Covering</label>
+{{--                            <input id="check-8" type="checkbox" name="check">--}}
+{{--                            <label for="check-8">Window Covering</label>--}}
 
                         </div>
                         <!-- Checkboxes / End -->
@@ -570,9 +581,11 @@
 
 
                     <div class="divider"></div>
-                    <a href="#" class="button preview margin-top-5">Preview <i class="fa fa-arrow-circle-right"></i></a>
+{{--                    <a href="#" class="button preview margin-top-5">Preview <i class="fa fa-arrow-circle-right"></i></a>--}}
+                    <button type="submit" class="button preview margin-top-5">Preview <i class="fa fa-arrow-circle-right"></i></button>
 
                 </div>
+                </form>
             </div>
 
         </div>
@@ -647,6 +660,8 @@
     <!-- Back To Top Button -->
     <div id="backtotop"><a href="#"></a></div>
 
+</div>
+<!-- Wrapper / End -->
 
     <!-- Scripts
     ================================================== -->
@@ -676,8 +691,6 @@
 
 
 
-</div>
-<!-- Wrapper / End -->
 
 
 </body>
