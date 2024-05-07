@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Feature;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
@@ -19,7 +20,8 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        return view('property.create');
+        $features = Feature::all();
+        return view('property.create')->with('features', $features);
     }
 
     /**
