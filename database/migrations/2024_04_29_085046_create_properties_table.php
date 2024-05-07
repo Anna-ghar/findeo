@@ -26,6 +26,7 @@ return new class extends Migration
             $table->integer('bathrooms');
             $table->integer('building_age');
             $table->integer('bedrooms');
+            $table->string('status');
             $table->timestamps();
         });
     }

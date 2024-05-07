@@ -328,7 +328,7 @@
                         <!-- Title -->
                         <div class="form">
                             <h5>Property Title <i class="tip" data-tip-content="Type title that will also contains an unique feature of your property (e.g. renovated, air contidioned)"></i></h5>
-                            <input class="search-field" type="text" value=""/>
+                            <input class="search-field" type="text" value="" name="title"/>
                         </div>
 
                         <!-- Row -->
@@ -337,7 +337,7 @@
                             <!-- Status -->
                             <div class="col-md-6">
                                 <h5>Status</h5>
-                                <select class="chosen-select-no-single" >
+                                <select class="chosen-select-no-single" name="status">
                                     <option label="blank"></option>
                                     <option>For Sale</option>
                                     <option>For Rent</option>
@@ -347,7 +347,7 @@
                             <!-- Type -->
                             <div class="col-md-6">
                                 <h5>Type</h5>
-                                <select class="chosen-select-no-single" >
+                                <select class="chosen-select-no-single" name="type">
                                     <option label="blank"></option>
                                     <option>Apartment</option>
                                     <option>House</option>
@@ -368,7 +368,7 @@
                             <div class="col-md-4">
                                 <h5>Price <i class="tip" data-tip-content="Type overall or monthly price if property is for rent"></i></h5>
                                 <div class="select-input disabled-first-option">
-                                    <input type="text" data-unit="USD">
+                                    <input type="text" data-unit="USD" name="price">
                                 </div>
                             </div>
 
@@ -376,14 +376,14 @@
                             <div class="col-md-4">
                                 <h5>Area</h5>
                                 <div class="select-input disabled-first-option">
-                                    <input type="text" data-unit="Sq Ft">
+                                    <input type="text" data-unit="Sq Ft" name="area">
                                 </div>
                             </div>
 
                             <!-- Rooms -->
                             <div class="col-md-4">
                                 <h5>Rooms</h5>
-                                <select class="chosen-select-no-single" >
+                                <select class="chosen-select-no-single" name="rooms">
                                     <option label="blank"></option>
                                     <option>1</option>
                                     <option>2</option>
@@ -419,7 +419,7 @@
                             <!-- Address -->
                             <div class="col-md-6">
                                 <h5>Address</h5>
-                                <input type="text">
+                                <input type="text" name="address">
                             </div>
 
                             <!-- City -->
@@ -454,7 +454,7 @@
                         <!-- Description -->
                         <div class="form">
                             <h5>Description</h5>
-                            <textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
+                            <textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="summary" spellcheck="true""></textarea>
                         </div>
 
                         <!-- Row -->
@@ -463,7 +463,7 @@
                             <!-- Age of Home -->
                             <div class="col-md-4">
                                 <h5>Building Age <span>(optional)</span></h5>
-                                <select class="chosen-select-no-single" >
+                                <select class="chosen-select-no-single" name="building-age">
                                     <option label="blank"></option>
                                     <option>0 - 1 Years</option>
                                     <option>0 - 5 Years</option>
@@ -477,7 +477,7 @@
                             <!-- Beds -->
                             <div class="col-md-4">
                                 <h5>Bedrooms <span>(optional)</span></h5>
-                                <select class="chosen-select-no-single" >
+                                <select class="chosen-select-no-single" name="bedrooms">
                                     <option label="blank"></option>
                                     <option>1</option>
                                     <option>2</option>
@@ -490,7 +490,7 @@
                             <!-- Baths -->
                             <div class="col-md-4">
                                 <h5>Bathrooms <span>(optional)</span></h5>
-                                <select class="chosen-select-no-single" >
+                                <select class="chosen-select-no-single" name="bathrooms">
                                     <option label="blank"></option>
                                     <option>1</option>
                                     <option>2</option>
