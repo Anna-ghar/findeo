@@ -23,18 +23,21 @@ class PropertySubmitRequest extends FormRequest
     {
         return [
 
-            'title' => 'required',
-            'status' => 'required',
-            'type' => 'required',
+            'title' => 'required|string',
+
+            'status' => 'required|string',
+            'type_id' => 'required|numeric',
             'price' => 'required|numeric',
             'area' => 'required|numeric',
-            'rooms' => 'required',
+            'rooms' => 'required|numeric',
             'address' => 'required|string',
-            'city' => 'required|string',
-            'state' => 'required|string',
-            'zip' => 'required|numeric',
-            'summary' => 'required|string',
+            'city' => 'string',
+            'state' => 'string',
+            'zip-code' => 'required|string',
+            'description' => 'required|string',
             'features' => 'array',
+            'building_age' => 'string',
+
         ];
     }
 }

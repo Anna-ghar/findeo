@@ -10,16 +10,27 @@ class Property extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'user_id',
         'title',
         'description',
         'address',
         'price',
         'rooms',
+        'status',
+        'type_id',
+        'area',
+        'city',
+        'state',
+        'zip-code',
+        'bathrooms',
+        'building_age',
+        'bedrooms',
+
     ];
 
-    public function property_images()
+    public function images()
     {
-        return $this->hasMany(Property_Image::class, 'property_id');
+        return $this->belongsToMany(Image::class, 'property_images', 'property_id', 'img_id');
     }
 
     public function user()

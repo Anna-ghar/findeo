@@ -81,7 +81,7 @@
 
                 <!-- Logo -->
                 <div id="logo">
-                    <a href="{{route('index')}}"><img src="{{ asset('images/logo.png') }}" alt=""></a>
+                    <a href="{{route('welcome')}}"><img src="{{ asset('images/logo.png') }}" alt=""></a>
                 </div>
 
 
@@ -112,7 +112,7 @@
                             <ul>
                                 <li><a href="#">List Layout</a>
                                     <ul>
-                                        <li><a href="listings-list-with-sidebar.html">With Sidebar</a></li>
+                                        <li><a href="{{route('properties.index')}}">With Sidebar</a></li>
                                         <li><a href="listings-list-with-map.html">With Map</a></li>
                                         <li><a href="listings-list-full-width.html">Full Width</a></li>
                                     </ul>
@@ -211,13 +211,13 @@
                                 <li><a href="my-profile.html"><i class="sl sl-icon-user"></i> My Profile</a></li>
                                 <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Bookmarks</a></li>
                                 <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> My Properties</a></li>
-                                <li><a href="index.html"><i class="sl sl-icon-power"></i> Log Out</a></li>
+                                <li><a href="{{route('logout')}}"><i class="sl sl-icon-power"></i> Log Out</a></li>
                             </ul>
                         </div>
                     @else
                         <a href="{{route('loginPage')}}" class="sign-in"><i class="fa fa-user"></i> Log In / Register</a>
                     @endif
-                    <a href="{{route('create')}}" class="button border">Submit Property</a>
+                    <a href="{{route('properties.create')}}" class="button border">Submit Property</a>
                 </div>
                 <!-- Header Widget / End -->
             </div>
@@ -230,19 +230,19 @@
 </header>
 </div>
 <!-- Header Container / End -->
-<script type="text/javascript" src="{{ asset('scripts/jquery-3.4.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery-migrate-3.1.0.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/chosen.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/magnific-popup.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/owl.carousel.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/rangeSlider.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/rangeSlider.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/slick.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/masonry.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/mmenu.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/tooltips.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/custom.js') }}"></script>
+{{--<script type="text/javascript" src="{{ asset('scripts/jquery-3.4.1.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/jquery-migrate-3.1.0.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/chosen.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/magnific-popup.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/owl.carousel.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/rangeSlider.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/rangeSlider.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/slick.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/masonry.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/mmenu.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/tooltips.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('scripts/custom.js') }}"></script>--}}
 
-<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
+{{--<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>--}}
 
 </body>

@@ -11,9 +11,9 @@ class Image extends Model
     protected $fillable = [
         'url',
     ];
-    public function property_images()
+    public function properties()
     {
-        return $this->hasMany(Property_Image::class);
+        return $this->belongsToMany(Property::class, 'property_images', 'img_id', 'property_id');
     }
     public function users(){
         return $this->hasOne(User::class);

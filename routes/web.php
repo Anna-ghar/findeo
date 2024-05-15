@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\UserController;
+use App\Http\Controllers\PropertyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +18,16 @@ use \App\Http\Controllers\UserController;
 //    return view('welcome');
 //});
 
-Route::resource('/', '\App\Http\Controllers\PropertyController');
+Route::resource('/properties', '\App\Http\Controllers\PropertyController');
 Route::get('/login', [UserController::class,'login'])->name('loginPage');
 Route::post('/login', [UserController::class,'authenticate'])->name('login');
 Route::post('/registration', [UserController::class, 'registration'])->name('registration');
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+Route::get('/', [PropertyController::class, 'welcome'])->name('welcome');
+
+
+
+
 
 
